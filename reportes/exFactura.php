@@ -18,11 +18,11 @@ require('Factura.php');
 //Establecemos los datos de la empresa
 $logo = "logo.jpg";
 $ext_logo = "jpg";
-$empresa = "Soluciones Innovadoras Perú S.A.C.";
+$empresa = "EMPRESA FICTICIA STO DGO S.A.";
 $documento = "20477157772";
-$direccion = "Chongoyape, José Gálvez 1368";
+$direccion = "Carretera Mella #34 Hainamosa";
 $telefono = "931742904";
-$email = "jcarlos.ad7@gmail.com";
+$email = "jonathan@mail.com";
 
 //Obtenemos los datos de la cabecera de la venta actual
 require_once "../modelos/Venta.php";
@@ -52,14 +52,14 @@ $pdf->addClientAdresse(utf8_decode($regv->cliente),"Domicilio: ".utf8_decode($re
 $cols=array( "CODIGO"=>23,
              "DESCRIPCION"=>78,
              "CANTIDAD"=>22,
-             "P.U."=>25,
+             "R.D."=>25,
              "DSCTO"=>20,
              "SUBTOTAL"=>22);
 $pdf->addCols( $cols);
 $cols=array( "CODIGO"=>"L",
              "DESCRIPCION"=>"L",
              "CANTIDAD"=>"C",
-             "P.U."=>"R",
+             "R.D."=>"R",
              "DSCTO" =>"R",
              "SUBTOTAL"=>"C");
 $pdf->addLineFormat( $cols);
@@ -74,7 +74,7 @@ while ($regd = $rsptad->fetch_object()) {
   $line = array( "CODIGO"=> "$regd->codigo",
                 "DESCRIPCION"=> utf8_decode("$regd->articulo"),
                 "CANTIDAD"=> "$regd->cantidad",
-                "P.U."=> "$regd->precio_venta",
+                "R.D."=> "$regd->precio_venta",
                 "DSCTO" => "$regd->descuento",
                 "SUBTOTAL"=> "$regd->subtotal");
             $size = $pdf->addLine( $y, $line );
@@ -84,7 +84,7 @@ while ($regd = $rsptad->fetch_object()) {
 //Convertimos el total en letras
 require_once "Letras.php";
 $V=new EnLetras(); 
-$con_letra=strtoupper($V->ValorEnLetras($regv->total_venta,"NUEVOS SOLES"));
+$con_letra=strtoupper($V->ValorEnLetras($regv->total_venta,"PESO"));
 $pdf->addCadreTVAs("---".$con_letra);
 
 //Mostramos el impuesto

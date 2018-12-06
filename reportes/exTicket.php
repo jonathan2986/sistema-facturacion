@@ -31,11 +31,11 @@ $rspta = $venta->ventacabecera($_GET["id"]);
 $reg = $rspta->fetch_object();
 
 //Establecemos los datos de la empresa
-$empresa = "Soluciones Innovadoras Perú S.A.C.";
+$empresa = "Empresa Ficticia S.A";
 $documento = "20477157772";
-$direccion = "Chongoyape, José Gálvez 1368";
-$telefono = "931742904";
-$email = "jcarlos.ad7@gmail.com";
+$direccion = "Carretera Mella #37 Hinamosa";
+$telefono = "829-758-2986";
+$email = "jonathan@mail.com";
 
 ?>
 <div class="zona_impresion">
@@ -106,10 +106,10 @@ $email = "jcarlos.ad7@gmail.com";
       <td colspan="3" align="center">¡Gracias por su compra!</td>
     </tr>
     <tr>
-      <td colspan="3" align="center">IncanatoIT</td>
+      <td colspan="3" align="center">EMP FICTICIA</td>
     </tr>
     <tr>
-      <td colspan="3" align="center">Chiclayo - Perú</td>
+      <td colspan="3" align="center">Santo Domingo Este</td>
     </tr>
     
 </table>

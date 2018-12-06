@@ -7,7 +7,7 @@ if (strlen(session_id()) < 1)
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ITVentas</title>
+    <title>ITFicticia</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -40,7 +40,7 @@ if (strlen(session_id()) < 1)
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>IT</b>Ventas</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>ITVentas</b></span>
+          <span class="logo-lg"><b>ITFicticia</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
